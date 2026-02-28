@@ -1,10 +1,29 @@
-🔍 Semantic Search & Recommendation System Using Word2Vec📌 Project OverviewThis project builds an intelligent semantic search and article recommendation system using Word2Vec embeddings. The model is trained from scratch on the BBC News full-text dataset, comprising 2,225 real English news articles across five distinct categories.Unlike traditional keyword-based search (which relies on exact word matches), this system understands the latent meaning of text—allowing it to find relevant articles even when the query and the document do not share the exact same vocabulary.🗂️ Dataset InformationSource: BBC Full-Text Document Classification (Kaggle)Folder StructureThe system expects the following directory layout after extraction:Plaintextbbc-fulltext (document classification)/
+🔍 Semantic Search & Recommendation System Using Word2Vec📌
+Project Overview
+This project builds an intelligent semantic search and article recommendation system using Word2Vec embeddings. The model is trained from scratch on the BBC News full-text dataset, comprising 2,225 real English news articles across five distinct categories.Unlike traditional keyword-based search (which relies on exact word matches), this system understands the latent meaning of text—allowing it to find relevant articles even when the query and the document do not share the exact same vocabulary.
+🗂️ Dataset InformationSource: 
+BBC Full-Text Document Classification (Kaggle)
+Folder Structure
+The system expects the following directory layout after extraction:
+Plaintextbbc-fulltext 
+(document classification)/
 ├── business/ (e.g., 001.txt, 002.txt...)
 ├── tech/
 ├── sport/
 ├── entertainment/
 └── politics/
-Total Articles: 2,225Format: Raw .txt files containing full news stories.🧠 System PipelineThe architecture follows a standard NLP pipeline from raw data to multidimensional visualization:Data Ingestion: Auto-detects the BBC folder structure.Preprocessing: Lowercasing, punctuation removal, stopword filtering (80+ words), and tokenization.Model Training: Word2Vec Skip-Gram model trained from scratch (100 dimensions, window=5, 100 epochs).Vectorization: Sentence vectors generated via Mean Pooling of word embeddings.Downstream Tasks: * Semantic Search: Ranks articles by Cosine Similarity to a query string.Recommendation: Finds the top-N semantically similar articles for a given seed article.Visualization: Dimensionality reduction via PCA and t-SNE.🛠️ Technology StackComponentTechnologyLanguagePython 3.11+Embedding ModelWord2Vec (Gensim) — Skip-GramSimilarity MetricCosine Similarity (Scikit-learn)Dimensionality ReductionPCA, t-SNE (Scikit-learn)VisualizationMatplotlib, SeabornData HandlingPandas, NumPy📁 Project File StructurePlaintextproject/
+Total Articles: 2,225Format: Raw .txt files containing full news stories.
+🧠 System Pipeline
+The architecture follows a standard NLP pipeline from raw data to multidimensional visualization:
+Data Ingestion: Auto-detects the BBC folder structure.
+Preprocessing: Lowercasing, punctuation removal, stopword filtering (80+ words), and tokenization.
+Model Training: Word2Vec Skip-Gram model trained from scratch (100 dimensions, window=5, 100 epochs).
+Vectorization: Sentence vectors generated via Mean Pooling of word embeddings.
+Downstream Tasks: * Semantic Search: Ranks articles by Cosine Similarity to a query string.
+Recommendation: Finds the top-N semantically similar articles for a given seed article.
+Visualization: Dimensionality reduction via PCA and t-SNE.🛠️ 
+Technology Stack
+ComponentTechnologyLanguagePython 3.11+Embedding ModelWord2Vec (Gensim) — Skip-GramSimilarity MetricCosine Similarity (Scikit-learn)Dimensionality ReductionPCA, t-SNE (Scikit-learn)VisualizationMatplotlib, SeabornData HandlingPandas, NumPy📁 Project File StructurePlaintextproject/
 ├── LPU_Project8_Semantic_Search.ipynb  # Main Notebook (Run this)
 ├── README.md                           # Project Documentation
 ├── bbc-fulltext/                       # Dataset folder
