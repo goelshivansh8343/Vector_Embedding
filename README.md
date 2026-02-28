@@ -61,7 +61,7 @@ project/
     └── word_similarity_bars.png
 ⚙️ Setup & Installation
 1. Clone / Download the project
-git clone https://github.com/srinivasgupth81/embedding.git
+git clone https://github.com/goelshivansh8343/embedding.git
 2. Install dependencies
 pip install gensim scikit-learn matplotlib seaborn pandas numpy
 Or run the first cell in the notebook — it installs everything automatically.
@@ -116,6 +116,7 @@ sport	higher	lower	positive
 business	higher	lower	positive
 politics	moderate	lower	positive
 entertainment	moderate	lower	positive
+
 🆚 How This Differs From the Keyword Approach
 Feature	Keyword Search	This System (Word2Vec)
 Matching method	Exact word match	Semantic meaning
